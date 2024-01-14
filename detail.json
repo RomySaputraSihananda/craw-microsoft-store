@@ -1,0 +1,1309 @@
+{
+  "previews": [],
+  "subtitleNarratorText": null,
+  "typeTag": null,
+  "ratingCountFormatted": "7.1K",
+  "iconUrl": "https://store-images.s-microsoft.com/image/apps.4211.13634052595610511.c45457c9-b4af-46b0-8e61-8d7c0aec3f56.462d07a1-732f-40d7-acd3-370f7b96ba1a",
+  "pdpImageUrl": "https://store-images.s-microsoft.com/image/apps.4784.13634052595610511.c45457c9-b4af-46b0-8e61-8d7c0aec3f56.3d483847-81a6-4078-8f83-a35c5c38ee92",
+  "largePromotionImage": null,
+  "posterArtUrl": "https://store-images.s-microsoft.com/image/apps.54562.13634052595610511.c45457c9-b4af-46b0-8e61-8d7c0aec3f56.24af4abe-62f8-404b-b1a9-ee8fe4d32d94",
+  "boxArtUrl": "https://store-images.s-microsoft.com/image/apps.59037.13634052595610511.c45457c9-b4af-46b0-8e61-8d7c0aec3f56.e31efafb-d219-4478-afda-89343c80489d",
+  "iconUrlBackground": "transparent",
+  "trailers": [],
+  "screenshots": [
+    {
+      "imageType": "screenshot",
+      "backgroundColor": "transparent",
+      "foregroundColor": "",
+      "caption": "",
+      "imagePositionInfo": "Desktop/0",
+      "productColor": null,
+      "url": "https://store-images.s-microsoft.com/image/apps.60939.13634052595610511.61855810-f6fa-4a6c-aa1f-520d3b480f99.167a5568-91dd-4a28-b62d-b63eb0647f6b",
+      "height": 768,
+      "width": 1366
+    },
+    {
+      "imageType": "screenshot",
+      "backgroundColor": "transparent",
+      "foregroundColor": "",
+      "caption": "",
+      "imagePositionInfo": "Desktop/1",
+      "productColor": null,
+      "url": "https://store-images.s-microsoft.com/image/apps.42868.13634052595610511.61855810-f6fa-4a6c-aa1f-520d3b480f99.9254ce78-04d5-4423-94b5-a2be374029de",
+      "height": 768,
+      "width": 1366
+    },
+    {
+      "imageType": "screenshot",
+      "backgroundColor": "transparent",
+      "foregroundColor": "",
+      "caption": "",
+      "imagePositionInfo": "Desktop/2",
+      "productColor": null,
+      "url": "https://store-images.s-microsoft.com/image/apps.17864.13634052595610511.61855810-f6fa-4a6c-aa1f-520d3b480f99.0921a47f-e4dd-410b-9967-c6323a5cb080",
+      "height": 768,
+      "width": 1366
+    },
+    {
+      "imageType": "screenshot",
+      "backgroundColor": "transparent",
+      "foregroundColor": "",
+      "caption": "",
+      "imagePositionInfo": "Desktop/3",
+      "productColor": null,
+      "url": "https://store-images.s-microsoft.com/image/apps.28815.13634052595610511.61855810-f6fa-4a6c-aa1f-520d3b480f99.8808d05c-1474-451f-9b9a-ad903e7e3c8a",
+      "height": 768,
+      "width": 1366
+    },
+    {
+      "imageType": "screenshot",
+      "backgroundColor": "transparent",
+      "foregroundColor": "",
+      "caption": "",
+      "imagePositionInfo": "Desktop/4",
+      "productColor": null,
+      "url": "https://store-images.s-microsoft.com/image/apps.28460.13634052595610511.61855810-f6fa-4a6c-aa1f-520d3b480f99.fc7e978b-8db4-4147-af38-5d3110a9e03a",
+      "height": 768,
+      "width": 1366
+    }
+  ],
+  "encodedTitle": "tiktok",
+  "isMovie": false,
+  "isApplication": true,
+  "isGame": false,
+  "isTvSeries": false,
+  "isMoviesOrTVs": false,
+  "isPwa": true,
+  "isCoreGame": false,
+  "isAllowed": false,
+  "isBrowsable": true,
+  "isAd": false,
+  "isPrimeVideo": false,
+  "isSparkProduct": false,
+  "isAndroid": false,
+  "redirectUrl": null,
+  "platforms": [
+    "x86",
+    "x64",
+    "ARM",
+    "ARM64"
+  ],
+  "privacyUrl": "https://www.tiktok.com/legal/privacy-policy",
+  "additionalTermLinks": null,
+  "legalUrl": null,
+  "accessible": false,
+  "isDeviceCompanionApp": false,
+  "supportUris": [
+    {
+      "uri": "https://www.tiktok.com/legal/report/feedback",
+      "purpose": null
+    }
+  ],
+  "features": [
+    "Videos, Music & Live Streams"
+  ],
+  "notes": null,
+  "supportedLanguages": [
+    "English (United States)"
+  ],
+  "publisherCopyrightInformation": "",
+  "publisherAddress": null,
+  "publisherPhoneNumber": null,
+  "additionalLicenseTerms": "",
+  "appWebsiteUrl": "https://www.tiktok.com",
+  "productRatings": [
+    {
+      "ratingSystem": "Entertainment Software Rating Board",
+      "ratingSystemShortName": "ESRB",
+      "ratingSystemId": "ESRB",
+      "ratingSystemUrl": "https://www.esrb.org/ratings-guide/",
+      "ratingValue": "TEEN",
+      "ratingId": "ESRB:T",
+      "ratingValueLogoUrl": "https://store-images.microsoft.com/image/global.17268.image.4cc004ee-a56d-4f11-ae99-67a89379b743.13d51d69-d3ba-4760-8fdf-f996abafa50a",
+      "ratingAge": 13,
+      "restrictMetadata": false,
+      "restrictPurchase": false,
+      "ratingDescriptors": [],
+      "ratingDescriptorLogoUrls": null,
+      "ratingDisclaimers": [],
+      "interactiveElements": [
+        "Users Interact"
+      ],
+      "longName": "TEEN",
+      "shortName": "T",
+      "description": "For ages 13 and up"
+    }
+  ],
+  "requiredHardware": null,
+  "recommendedHardware": null,
+  "hardwareWarnings": null,
+  "permissionsRequired": [
+    "Access your Internet connection"
+  ],
+  "packageAndDeviceCapabilities": [
+    "runFullTrust",
+    "internetClient",
+    "Microsoft.storeFilter.core.notSupported_8wekyb3d8bbwe"
+  ],
+  "version": "",
+  "lastUpdateDateUtc": "2023-02-27T16:53:55Z",
+  "skus": [
+    {
+      "actions": [
+        "Details",
+        "Fulfill",
+        "Purchase",
+        "Browse",
+        "Curate",
+        "Redeem"
+      ],
+      "availabilityId": "B0V2GCT74TDB",
+      "skuType": "full",
+      "price": 0,
+      "displayPrice": "Free",
+      "buyActionTitleOverride": null,
+      "buyActionSubtitle": null,
+      "currencyMismatch": false,
+      "strikethroughPrice": null,
+      "promoMessage": null,
+      "promoEndDateUtc": null,
+      "currencyCode": "USD",
+      "currencySymbol": "$",
+      "resourceSetId": "1",
+      "isPaymentInstrumentRequired": false,
+      "fulfillmentData": "{\"ProductId\":\"9NH2GPH4JZS4\",\"WuBundleId\":\"0ff8e444-958c-496a-a85e-e671e846e442\",\"WuCategoryId\":\"0bbfd453-65ef-4b83-a7ef-9098cf5d98a1\",\"PackageFamilyName\":\"BytedancePte.Ltd.TikTok_6yccndn6064se\",\"SkuId\":\"0010\",\"Content\":null,\"PackageFeatures\":null}",
+      "msaPurchaseType": "PurchaseActionMsaAllowBypass",
+      "packageRequirements": [
+        {
+          "hardwareRequirements": [],
+          "hardwareDependencies": null,
+          "supportedArchitectures": [
+            "neutral"
+          ],
+          "platformDependencies": [
+            {
+              "platformName": "Windows.Universal",
+              "minVersion": 2814751012487168,
+              "maxTested": 3377699720527872
+            }
+          ]
+        },
+        {
+          "hardwareRequirements": [],
+          "hardwareDependencies": null,
+          "supportedArchitectures": [
+            "neutral"
+          ],
+          "platformDependencies": [
+            {
+              "platformName": "Windows.Desktop",
+              "minVersion": 2814751014977536,
+              "maxTested": 2814751014977536
+            },
+            {
+              "platformName": "Windows.Holographic",
+              "minVersion": 2814751014977536,
+              "maxTested": 2814751014977536
+            }
+          ]
+        },
+        {
+          "hardwareRequirements": [],
+          "hardwareDependencies": null,
+          "supportedArchitectures": [
+            "x86"
+          ],
+          "platformDependencies": [
+            {
+              "platformName": "Windows.Desktop",
+              "minVersion": 2814750835277824,
+              "maxTested": 2814750970478592
+            }
+          ]
+        }
+      ],
+      "timedTrialMessage": null,
+      "remainingDaysInTrial": 0,
+      "durationInSeconds": null,
+      "hardwareRequirements": [],
+      "hardwareWarnings": [],
+      "operatingSystemType": null,
+      "startDate": "1753-01-01T00:00:00Z",
+      "endDate": "9998-12-30T00:00:00Z",
+      "requiredEntitlementKeys": null,
+      "contentIds": null,
+      "upgradeToProductId": null,
+      "unlockProductId": null,
+      "eligibleUpgrades": null,
+      "upsellLinks": null,
+      "skuButtonTitle": "",
+      "recurrencePolicyId": null,
+      "recurrencePolicyTitle": null,
+      "consumableQuantity": null,
+      "availabilities": [
+        {
+          "availabilityId": "B0V2GCT74TDB",
+          "price": 0,
+          "displayPrice": "Free",
+          "recurrencePrice": null,
+          "displayRecurrencePrice": null,
+          "strikethroughPrice": null,
+          "buyActionTitleOverride": null,
+          "buyActionSubtitle": null,
+          "currencyMismatch": false,
+          "promoMessage": null,
+          "remediations": null,
+          "remediationRequired": false,
+          "availabilityEndDate": "9998-12-30T00:00:00Z",
+          "preorderReleaseDate": "0001-01-01T00:00:00Z",
+          "displayRank": 0,
+          "displayGroup": null,
+          "affirmation": null,
+          "conditions": {
+            "endDate": "9998-12-30 00:00:00Z",
+            "startDate": "1753-01-01 00:00:00Z",
+            "resourceSetIds": [
+              "1"
+            ],
+            "clientConditions": {
+              "allowedPlatforms": [
+                {
+                  "maxVersion": 2147483647,
+                  "minVersion": 0,
+                  "platformName": "Windows.Desktop"
+                },
+                {
+                  "maxVersion": 2147483647,
+                  "minVersion": 0,
+                  "platformName": "Windows.Mobile"
+                },
+                {
+                  "maxVersion": 2147483647,
+                  "minVersion": 0,
+                  "platformName": "Windows.Team"
+                },
+                {
+                  "maxVersion": 2147483647,
+                  "minVersion": 0,
+                  "platformName": "Windows.Holographic"
+                }
+              ]
+            }
+          },
+          "actions": [
+            "Details",
+            "Fulfill",
+            "Purchase",
+            "Browse",
+            "Curate",
+            "Redeem"
+          ],
+          "isGamesWithGold": false,
+          "promoMessageDescription": ""
+        },
+        {
+          "availabilityId": "B4ZB2KZVTCHR",
+          "price": 0,
+          "displayPrice": "",
+          "recurrencePrice": null,
+          "displayRecurrencePrice": null,
+          "strikethroughPrice": "",
+          "buyActionTitleOverride": null,
+          "buyActionSubtitle": null,
+          "currencyMismatch": false,
+          "promoMessage": "",
+          "remediations": null,
+          "remediationRequired": false,
+          "availabilityEndDate": "9998-12-30T00:00:00Z",
+          "preorderReleaseDate": "0001-01-01T00:00:00Z",
+          "displayRank": 1,
+          "displayGroup": null,
+          "affirmation": null,
+          "conditions": {
+            "endDate": "9998-12-30 00:00:00Z",
+            "startDate": "1753-01-01 00:00:00Z",
+            "resourceSetIds": [
+              "1"
+            ],
+            "clientConditions": {
+              "allowedPlatforms": [
+                {
+                  "maxVersion": 2147483647,
+                  "minVersion": 0,
+                  "platformName": "Windows.Desktop"
+                },
+                {
+                  "maxVersion": 2147483647,
+                  "minVersion": 0,
+                  "platformName": "Windows.Mobile"
+                },
+                {
+                  "maxVersion": 2147483647,
+                  "minVersion": 0,
+                  "platformName": "Windows.Team"
+                },
+                {
+                  "maxVersion": 2147483647,
+                  "minVersion": 0,
+                  "platformName": "Windows.Holographic"
+                }
+              ]
+            }
+          },
+          "actions": [
+            "License",
+            "Browse",
+            "Details"
+          ],
+          "isGamesWithGold": false,
+          "promoMessageDescription": ""
+        },
+        {
+          "availabilityId": "9PR3WP3N5N1B",
+          "price": 0,
+          "displayPrice": "",
+          "recurrencePrice": null,
+          "displayRecurrencePrice": null,
+          "strikethroughPrice": "",
+          "buyActionTitleOverride": null,
+          "buyActionSubtitle": null,
+          "currencyMismatch": false,
+          "promoMessage": "",
+          "remediations": null,
+          "remediationRequired": false,
+          "availabilityEndDate": "9998-12-30T00:00:00Z",
+          "preorderReleaseDate": "0001-01-01T00:00:00Z",
+          "displayRank": 2,
+          "displayGroup": null,
+          "affirmation": null,
+          "conditions": {
+            "endDate": "9998-12-30 00:00:00Z",
+            "startDate": "1753-01-01 00:00:00Z",
+            "resourceSetIds": [
+              "1"
+            ],
+            "clientConditions": {
+              "allowedPlatforms": [
+                {
+                  "maxVersion": 2147483647,
+                  "minVersion": 0,
+                  "platformName": "Windows.Xbox"
+                }
+              ]
+            }
+          },
+          "actions": [
+            "License",
+            "Details"
+          ],
+          "isGamesWithGold": false,
+          "promoMessageDescription": ""
+        }
+      ],
+      "bundledSkus": null,
+      "isPreorder": false,
+      "isRental": false,
+      "rentalDurationInDays": null,
+      "firstAvailableDate": "2021-06-24T14:56:40.050714Z",
+      "isRepurchasable": false,
+      "skuInformationChart": null,
+      "videoInstances": null,
+      "skuId": "0010",
+      "skuDisplayRanks": [
+        {
+          "dimension": null,
+          "rank": 0
+        }
+      ],
+      "skuTitle": "TikTok",
+      "description": "TikTok is THE destination for mobile videos. On TikTok, short-form videos are exciting, spontaneous, and genuine. Whether you’re a sports fanatic, a pet enthusiast, or just looking for a laugh, there’s something for everyone on TikTok. All you have to do is watch, engage with what you like, skip what you don’t, and you’ll find an endless stream of short videos that feel personalized just for you. From your morning coffee to your afternoon errands, TikTok has the videos that are guaranteed to make your day.\r\n\r\nWe make it easy for you to discover and create your own original videos by providing easy-to-use tools to view and capture your daily moments. Take your videos to the next level with special effects, filters, music, and more. \r\n\r\n■ Watch endless amount of videos customized specifically for you\r\nA personalized video feed based on what you watch, like, and share. TikTok offers you real, interesting, and fun videos that will make your day.\r\n \r\n■ Explore videos, just one scroll away\r\nWatch all types of videos, from Comedy, Gaming, DIY, Food, Sports, Memes, and Pets, to Oddly Satisfying, ASMR, and everything in between.\r\n \r\n■ Pause recording multiple times in one video\r\nPause and resume your video with just a tap. Shoot as many times as you need.\r\n \r\n■ Be entertained and inspired by a global community of creators\r\nMillions of creators are on TikTok showcasing their incredible skills and everyday life. Let yourself be inspired.\r\n\r\n■ Add your favorite music or sound to your videos for free\r\nEasily edit your videos with millions of free music clips and sounds. We curate music and sound playlists for you with the hottest tracks in every genre, including Hip Hop, Edm, Pop, Rock, Rap, and Country, and the most viral original sounds.\r\n\r\n■ Express yourself with creative effects\r\nUnlock tons of filters, effects, and AR objects to take your videos to the next level.\r\n\r\n■ Edit your own videos \r\nOur integrated editing tools allow you to easily trim, cut, merge and duplicate video clips without leaving the app.\r\n\r\n* Any feedback? Contact us at https://www.tiktok.com/legal/report/feedback or tweet us @tiktok_us",
+      "images": null,
+      "badges": null,
+      "colorHexCode": null,
+      "colorDisplayName": null,
+      "msrp": 0,
+      "displayMSRP": "Free",
+      "salePrices": [
+        {
+          "conditions": null,
+          "price": 0,
+          "displayPrice": "Free",
+          "badgeId": "default"
+        }
+      ],
+      "includedWith": null,
+      "streamingService": null
+    },
+    {
+      "actions": [
+        "Details",
+        "License",
+        "Fulfill"
+      ],
+      "availabilityId": "9N9WB7P7M3Q4",
+      "skuType": "trial",
+      "price": 0,
+      "displayPrice": "",
+      "buyActionTitleOverride": null,
+      "buyActionSubtitle": null,
+      "currencyMismatch": false,
+      "strikethroughPrice": "",
+      "promoMessage": "",
+      "promoEndDateUtc": null,
+      "currencyCode": null,
+      "currencySymbol": null,
+      "resourceSetId": "1",
+      "isPaymentInstrumentRequired": false,
+      "fulfillmentData": "{\"ProductId\":\"9NH2GPH4JZS4\",\"WuBundleId\":\"0ff8e444-958c-496a-a85e-e671e846e442\",\"WuCategoryId\":\"0bbfd453-65ef-4b83-a7ef-9098cf5d98a1\",\"PackageFamilyName\":\"BytedancePte.Ltd.TikTok_6yccndn6064se\",\"SkuId\":\"0011\",\"Content\":null,\"PackageFeatures\":null}",
+      "msaPurchaseType": "PurchaseActionMsaRequired",
+      "packageRequirements": [
+        {
+          "hardwareRequirements": [],
+          "hardwareDependencies": null,
+          "supportedArchitectures": [
+            "neutral"
+          ],
+          "platformDependencies": [
+            {
+              "platformName": "Windows.Universal",
+              "minVersion": 2814751012487168,
+              "maxTested": 3377699720527872
+            }
+          ]
+        },
+        {
+          "hardwareRequirements": [],
+          "hardwareDependencies": null,
+          "supportedArchitectures": [
+            "neutral"
+          ],
+          "platformDependencies": [
+            {
+              "platformName": "Windows.Desktop",
+              "minVersion": 2814751014977536,
+              "maxTested": 2814751014977536
+            },
+            {
+              "platformName": "Windows.Holographic",
+              "minVersion": 2814751014977536,
+              "maxTested": 2814751014977536
+            }
+          ]
+        },
+        {
+          "hardwareRequirements": [],
+          "hardwareDependencies": null,
+          "supportedArchitectures": [
+            "x86"
+          ],
+          "platformDependencies": [
+            {
+              "platformName": "Windows.Desktop",
+              "minVersion": 2814750835277824,
+              "maxTested": 2814750970478592
+            }
+          ]
+        }
+      ],
+      "timedTrialMessage": null,
+      "remainingDaysInTrial": 0,
+      "durationInSeconds": null,
+      "hardwareRequirements": [],
+      "hardwareWarnings": [],
+      "operatingSystemType": null,
+      "startDate": "1753-01-01T00:00:00Z",
+      "endDate": "9998-12-30T00:00:00Z",
+      "requiredEntitlementKeys": null,
+      "contentIds": null,
+      "upgradeToProductId": null,
+      "unlockProductId": null,
+      "eligibleUpgrades": null,
+      "upsellLinks": null,
+      "skuButtonTitle": "",
+      "recurrencePolicyId": null,
+      "recurrencePolicyTitle": null,
+      "consumableQuantity": null,
+      "availabilities": [
+        {
+          "availabilityId": "9N9WB7P7M3Q4",
+          "price": 0,
+          "displayPrice": "",
+          "recurrencePrice": null,
+          "displayRecurrencePrice": null,
+          "strikethroughPrice": "",
+          "buyActionTitleOverride": null,
+          "buyActionSubtitle": null,
+          "currencyMismatch": false,
+          "promoMessage": "",
+          "remediations": null,
+          "remediationRequired": false,
+          "availabilityEndDate": "9998-12-30T00:00:00Z",
+          "preorderReleaseDate": "0001-01-01T00:00:00Z",
+          "displayRank": 0,
+          "displayGroup": null,
+          "affirmation": null,
+          "conditions": {
+            "endDate": "9998-12-30 00:00:00Z",
+            "startDate": "1753-01-01 00:00:00Z",
+            "resourceSetIds": [
+              "1"
+            ],
+            "clientConditions": {
+              "allowedPlatforms": [
+                {
+                  "maxVersion": 2147483647,
+                  "minVersion": 0,
+                  "platformName": "Windows.Desktop"
+                },
+                {
+                  "maxVersion": 2147483647,
+                  "minVersion": 0,
+                  "platformName": "Windows.Mobile"
+                },
+                {
+                  "maxVersion": 2147483647,
+                  "minVersion": 0,
+                  "platformName": "Windows.Team"
+                },
+                {
+                  "maxVersion": 2147483647,
+                  "minVersion": 0,
+                  "platformName": "Windows.Holographic"
+                }
+              ]
+            }
+          },
+          "actions": [
+            "Details",
+            "License",
+            "Fulfill"
+          ],
+          "isGamesWithGold": false,
+          "promoMessageDescription": ""
+        },
+        {
+          "availabilityId": "9WGKKDW09VVF",
+          "price": 0,
+          "displayPrice": "",
+          "recurrencePrice": null,
+          "displayRecurrencePrice": null,
+          "strikethroughPrice": "",
+          "buyActionTitleOverride": null,
+          "buyActionSubtitle": null,
+          "currencyMismatch": false,
+          "promoMessage": "",
+          "remediations": null,
+          "remediationRequired": false,
+          "availabilityEndDate": "9998-12-30T00:00:00Z",
+          "preorderReleaseDate": "0001-01-01T00:00:00Z",
+          "displayRank": 1,
+          "displayGroup": null,
+          "affirmation": null,
+          "conditions": {
+            "endDate": "9998-12-30 00:00:00Z",
+            "startDate": "1753-01-01 00:00:00Z",
+            "resourceSetIds": [
+              "1"
+            ],
+            "clientConditions": {
+              "allowedPlatforms": [
+                {
+                  "maxVersion": 2147483647,
+                  "minVersion": 0,
+                  "platformName": "Windows.Xbox"
+                }
+              ]
+            }
+          },
+          "actions": [
+            "License",
+            "Details"
+          ],
+          "isGamesWithGold": false,
+          "promoMessageDescription": ""
+        }
+      ],
+      "bundledSkus": null,
+      "isPreorder": false,
+      "isRental": false,
+      "rentalDurationInDays": null,
+      "firstAvailableDate": "2021-06-24T14:56:40.050714Z",
+      "isRepurchasable": false,
+      "skuInformationChart": null,
+      "videoInstances": null,
+      "skuId": "0011",
+      "skuDisplayRanks": [
+        {
+          "dimension": null,
+          "rank": 2
+        }
+      ],
+      "skuTitle": "TikTok",
+      "description": "TikTok is THE destination for mobile videos. On TikTok, short-form videos are exciting, spontaneous, and genuine. Whether you’re a sports fanatic, a pet enthusiast, or just looking for a laugh, there’s something for everyone on TikTok. All you have to do is watch, engage with what you like, skip what you don’t, and you’ll find an endless stream of short videos that feel personalized just for you. From your morning coffee to your afternoon errands, TikTok has the videos that are guaranteed to make your day.\r\n\r\nWe make it easy for you to discover and create your own original videos by providing easy-to-use tools to view and capture your daily moments. Take your videos to the next level with special effects, filters, music, and more. \r\n\r\n■ Watch endless amount of videos customized specifically for you\r\nA personalized video feed based on what you watch, like, and share. TikTok offers you real, interesting, and fun videos that will make your day.\r\n \r\n■ Explore videos, just one scroll away\r\nWatch all types of videos, from Comedy, Gaming, DIY, Food, Sports, Memes, and Pets, to Oddly Satisfying, ASMR, and everything in between.\r\n \r\n■ Pause recording multiple times in one video\r\nPause and resume your video with just a tap. Shoot as many times as you need.\r\n \r\n■ Be entertained and inspired by a global community of creators\r\nMillions of creators are on TikTok showcasing their incredible skills and everyday life. Let yourself be inspired.\r\n\r\n■ Add your favorite music or sound to your videos for free\r\nEasily edit your videos with millions of free music clips and sounds. We curate music and sound playlists for you with the hottest tracks in every genre, including Hip Hop, Edm, Pop, Rock, Rap, and Country, and the most viral original sounds.\r\n\r\n■ Express yourself with creative effects\r\nUnlock tons of filters, effects, and AR objects to take your videos to the next level.\r\n\r\n■ Edit your own videos \r\nOur integrated editing tools allow you to easily trim, cut, merge and duplicate video clips without leaving the app.\r\n\r\n* Any feedback? Contact us at https://www.tiktok.com/legal/report/feedback or tweet us @tiktok_us",
+      "images": null,
+      "badges": null,
+      "colorHexCode": null,
+      "colorDisplayName": null,
+      "msrp": null,
+      "displayMSRP": null,
+      "salePrices": null,
+      "includedWith": null,
+      "streamingService": null
+    }
+  ],
+  "osProductInformation": null,
+  "categoryId": "Entertainment",
+  "subcategoryId": "",
+  "navItemId": "apps",
+  "navId": "Apps",
+  "addOnPriceRange": null,
+  "recurrencePolicy": null,
+  "deviceFamilyDisallowedReason": null,
+  "builtFor": "Built for Windows 10",
+  "revisionId": "2023-02-27T16:54:55.0271239Z",
+  "pdpBackgroundColor": "#FFFFFF",
+  "containsDownloadPackage": true,
+  "systemRequirements": {
+    "minimum": {
+      "title": "Minimum",
+      "items": [
+        {
+          "level": "HardBlock",
+          "itemCode": "dvc",
+          "name": "Available on",
+          "description": "PC, Mobile, Surface Hub, HoloLens",
+          "validationHint": null,
+          "isValidationPassed": true,
+          "helpLink": null,
+          "helpTitle": null,
+          "priority": "Default"
+        },
+        {
+          "level": "HardBlock",
+          "itemCode": "ops",
+          "name": "OS",
+          "description": "Windows 10 version 19041.0 or higher",
+          "validationHint": "required",
+          "isValidationPassed": true,
+          "helpLink": null,
+          "helpTitle": null,
+          "priority": "Default"
+        },
+        {
+          "level": "HardBlock",
+          "itemCode": "X86",
+          "name": "Architecture",
+          "description": "neutral",
+          "validationHint": "required",
+          "isValidationPassed": true,
+          "helpLink": null,
+          "helpTitle": null,
+          "priority": "Default"
+        }
+      ],
+      "emptySectionMessage": null
+    },
+    "recommended": {
+      "title": "Recommended",
+      "items": [
+        {
+          "level": "HardBlock",
+          "itemCode": "dvc",
+          "name": "Available on",
+          "description": "PC, Mobile, Surface Hub, HoloLens",
+          "validationHint": null,
+          "isValidationPassed": true,
+          "helpLink": null,
+          "helpTitle": null,
+          "priority": "Default"
+        },
+        {
+          "level": "HardBlock",
+          "itemCode": "ops",
+          "name": "OS",
+          "description": "Windows 10 version 19041.0 or higher",
+          "validationHint": "required",
+          "isValidationPassed": true,
+          "helpLink": null,
+          "helpTitle": null,
+          "priority": "Default"
+        },
+        {
+          "level": "HardBlock",
+          "itemCode": "X86",
+          "name": "Architecture",
+          "description": "neutral",
+          "validationHint": "required",
+          "isValidationPassed": true,
+          "helpLink": null,
+          "helpTitle": null,
+          "priority": "Default"
+        }
+      ],
+      "emptySectionMessage": null
+    }
+  },
+  "keyIds": [
+    "ff64541a-fb3b-a99d-8336-c85b95c1d475",
+    "a959ccde-02d8-c588-d8fb-5251a208ed87"
+  ],
+  "allowedPlatforms": [
+    "Windows.Desktop",
+    "Windows.Mobile",
+    "Windows.Team",
+    "Windows.Holographic"
+  ],
+  "xbox360ContentMediaId": null,
+  "earlyAdopterEnrollmentUrl": null,
+  "installationTerms": "Get this app while signed in to your Microsoft account and install on up to ten Windows devices.",
+  "skuDisplayGroups": null,
+  "xboxXpa": false,
+  "relatedPackageIdentities": null,
+  "primaryPackageIdentity": null,
+  "detailsDisplayConfiguration": {
+    "descriptionConfiguration": null,
+    "ratingsAndReviewsConfiguration": null
+  },
+  "ownershipType": null,
+  "offerExpirationDate": null,
+  "warningMessages": [
+    {
+      "header": "Seizure warnings",
+      "body": null,
+      "text": "Photosensitive seizure warning",
+      "target": "https://support.xbox.com/xbox-one/console/photosensitive-seizure-warning"
+    }
+  ],
+  "deviceQualified": null,
+  "isMicrosoftProduct": false,
+  "productFamilyLicenseTerms": null,
+  "hasParentBundles": false,
+  "hasAlternateEditions": false,
+  "isLtidCompatible": null,
+  "productPartD": {
+    "pdp": "pdpapplayout1",
+    "moduleTags": [
+      "AppsDefaultTabs"
+    ]
+  },
+  "videoProductType": "SimpleMovie",
+  "isMsixvc": false,
+  "position": null,
+  "parentId": null,
+  "categoryIds": [
+    "Entertainment"
+  ],
+  "mediaBadges": null,
+  "isEligibleForMoviesAnywhere": null,
+  "copyrightInformation": null,
+  "installer": {
+    "type": "WindowsUpdate",
+    "id": "9NH2GPH4JZS4",
+    "extras": null,
+    "installerErrorUrl": null,
+    "installerErrors": null
+  },
+  "catalogSource": "BigCat",
+  "webAppStartUrl": null,
+  "categories": [
+    "Entertainment"
+  ],
+  "images": [
+    {
+      "imageType": "logo",
+      "backgroundColor": "transparent",
+      "foregroundColor": "",
+      "caption": "",
+      "imagePositionInfo": "",
+      "productColor": null,
+      "url": "https://store-images.s-microsoft.com/image/apps.59037.13634052595610511.c45457c9-b4af-46b0-8e61-8d7c0aec3f56.e31efafb-d219-4478-afda-89343c80489d",
+      "height": 50,
+      "width": 50
+    },
+    {
+      "imageType": "logo",
+      "backgroundColor": "transparent",
+      "foregroundColor": "",
+      "caption": "",
+      "imagePositionInfo": "",
+      "productColor": null,
+      "url": "https://store-images.s-microsoft.com/image/apps.8115.13634052595610511.c45457c9-b4af-46b0-8e61-8d7c0aec3f56.ddff0b6e-7906-48f2-a64e-e00dd7e04cde",
+      "height": 75,
+      "width": 75
+    },
+    {
+      "imageType": "logo",
+      "backgroundColor": "transparent",
+      "foregroundColor": "",
+      "caption": "",
+      "imagePositionInfo": "",
+      "productColor": null,
+      "url": "https://store-images.s-microsoft.com/image/apps.62263.13634052595610511.c45457c9-b4af-46b0-8e61-8d7c0aec3f56.4a508410-9e70-413b-b7eb-7d7c1ae3828f",
+      "height": 100,
+      "width": 100
+    },
+    {
+      "imageType": "tile",
+      "backgroundColor": "transparent",
+      "foregroundColor": "",
+      "caption": "",
+      "imagePositionInfo": "",
+      "productColor": null,
+      "url": "https://store-images.s-microsoft.com/image/apps.4211.13634052595610511.c45457c9-b4af-46b0-8e61-8d7c0aec3f56.462d07a1-732f-40d7-acd3-370f7b96ba1a",
+      "height": 150,
+      "width": 150
+    },
+    {
+      "imageType": "tile",
+      "backgroundColor": "transparent",
+      "foregroundColor": "",
+      "caption": "",
+      "imagePositionInfo": "",
+      "productColor": null,
+      "url": "https://store-images.s-microsoft.com/image/apps.4784.13634052595610511.c45457c9-b4af-46b0-8e61-8d7c0aec3f56.3d483847-81a6-4078-8f83-a35c5c38ee92",
+      "height": 225,
+      "width": 225
+    },
+    {
+      "imageType": "tile",
+      "backgroundColor": "transparent",
+      "foregroundColor": "",
+      "caption": "",
+      "imagePositionInfo": "",
+      "productColor": null,
+      "url": "https://store-images.s-microsoft.com/image/apps.54562.13634052595610511.c45457c9-b4af-46b0-8e61-8d7c0aec3f56.24af4abe-62f8-404b-b1a9-ee8fe4d32d94",
+      "height": 300,
+      "width": 300
+    },
+    {
+      "imageType": "tile",
+      "backgroundColor": "transparent",
+      "foregroundColor": "",
+      "caption": "",
+      "imagePositionInfo": "",
+      "productColor": null,
+      "url": "https://store-images.s-microsoft.com/image/apps.36661.13634052595610511.89a90400-b49b-4c35-a777-60c92ea1e398.3b0dd04d-d918-48d3-8145-b267041ecf11",
+      "height": 44,
+      "width": 44
+    },
+    {
+      "imageType": "tile",
+      "backgroundColor": "transparent",
+      "foregroundColor": "",
+      "caption": "",
+      "imagePositionInfo": "",
+      "productColor": null,
+      "url": "https://store-images.s-microsoft.com/image/apps.49647.13634052595610511.89a90400-b49b-4c35-a777-60c92ea1e398.0564e5ae-ef60-49a2-a316-a2ff16032a9c",
+      "height": 66,
+      "width": 66
+    },
+    {
+      "imageType": "tile",
+      "backgroundColor": "transparent",
+      "foregroundColor": "",
+      "caption": "",
+      "imagePositionInfo": "",
+      "productColor": null,
+      "url": "https://store-images.s-microsoft.com/image/apps.12283.13634052595610511.89a90400-b49b-4c35-a777-60c92ea1e398.487c68d3-0e6f-407b-90fa-bf9d90b26abe",
+      "height": 88,
+      "width": 88
+    },
+    {
+      "imageType": "tile",
+      "backgroundColor": "transparent",
+      "foregroundColor": "",
+      "caption": "",
+      "imagePositionInfo": "",
+      "productColor": null,
+      "url": "https://store-images.s-microsoft.com/image/apps.37384.13634052595610511.c45457c9-b4af-46b0-8e61-8d7c0aec3f56.45aaed79-fe1f-40a9-8b16-c5e850bdb65c",
+      "height": 310,
+      "width": 310
+    },
+    {
+      "imageType": "tile",
+      "backgroundColor": "transparent",
+      "foregroundColor": "",
+      "caption": "",
+      "imagePositionInfo": "",
+      "productColor": null,
+      "url": "https://store-images.s-microsoft.com/image/apps.3793.13634052595610511.c45457c9-b4af-46b0-8e61-8d7c0aec3f56.bbc8b3d1-941b-42c2-a610-e100e2aae247",
+      "height": 465,
+      "width": 465
+    },
+    {
+      "imageType": "tile",
+      "backgroundColor": "transparent",
+      "foregroundColor": "",
+      "caption": "",
+      "imagePositionInfo": "",
+      "productColor": null,
+      "url": "https://store-images.s-microsoft.com/image/apps.47495.13634052595610511.c45457c9-b4af-46b0-8e61-8d7c0aec3f56.a8b71481-8a43-465d-88d6-e63add92c112",
+      "height": 620,
+      "width": 620
+    },
+    {
+      "imageType": "tile",
+      "backgroundColor": "transparent",
+      "foregroundColor": "",
+      "caption": "",
+      "imagePositionInfo": "",
+      "productColor": null,
+      "url": "https://store-images.s-microsoft.com/image/apps.55507.13634052595610511.c45457c9-b4af-46b0-8e61-8d7c0aec3f56.ba1bc58e-4e74-49ab-b2cb-792a37e04993",
+      "height": 71,
+      "width": 71
+    },
+    {
+      "imageType": "tile",
+      "backgroundColor": "transparent",
+      "foregroundColor": "",
+      "caption": "",
+      "imagePositionInfo": "",
+      "productColor": null,
+      "url": "https://store-images.s-microsoft.com/image/apps.5081.13634052595610511.c45457c9-b4af-46b0-8e61-8d7c0aec3f56.2198770d-fbd3-4323-aaee-ce96d9a9c591",
+      "height": 107,
+      "width": 107
+    },
+    {
+      "imageType": "tile",
+      "backgroundColor": "transparent",
+      "foregroundColor": "",
+      "caption": "",
+      "imagePositionInfo": "",
+      "productColor": null,
+      "url": "https://store-images.s-microsoft.com/image/apps.41671.13634052595610511.c45457c9-b4af-46b0-8e61-8d7c0aec3f56.86b1d82d-8b47-4bda-99fc-8a1db0a7ac9d",
+      "height": 142,
+      "width": 142
+    },
+    {
+      "imageType": "tile",
+      "backgroundColor": "transparent",
+      "foregroundColor": "",
+      "caption": "",
+      "imagePositionInfo": "",
+      "productColor": null,
+      "url": "https://store-images.s-microsoft.com/image/apps.15633.13634052595610511.c45457c9-b4af-46b0-8e61-8d7c0aec3f56.b3cd9f61-20a2-4073-bbec-e6d50aab2c63",
+      "height": 150,
+      "width": 310
+    },
+    {
+      "imageType": "tile",
+      "backgroundColor": "transparent",
+      "foregroundColor": "",
+      "caption": "",
+      "imagePositionInfo": "",
+      "productColor": null,
+      "url": "https://store-images.s-microsoft.com/image/apps.52135.13634052595610511.c45457c9-b4af-46b0-8e61-8d7c0aec3f56.a0fa539c-1edb-4631-8ad1-1b37c3fed095",
+      "height": 225,
+      "width": 465
+    },
+    {
+      "imageType": "tile",
+      "backgroundColor": "transparent",
+      "foregroundColor": "",
+      "caption": "",
+      "imagePositionInfo": "",
+      "productColor": null,
+      "url": "https://store-images.s-microsoft.com/image/apps.18774.13634052595610511.c45457c9-b4af-46b0-8e61-8d7c0aec3f56.600a0bb2-af98-4646-9d97-69cb3a90f3ce",
+      "height": 300,
+      "width": 620
+    },
+    {
+      "imageType": "screenshot",
+      "backgroundColor": "transparent",
+      "foregroundColor": "",
+      "caption": "",
+      "imagePositionInfo": "Desktop/0",
+      "productColor": null,
+      "url": "https://store-images.s-microsoft.com/image/apps.60939.13634052595610511.61855810-f6fa-4a6c-aa1f-520d3b480f99.167a5568-91dd-4a28-b62d-b63eb0647f6b",
+      "height": 768,
+      "width": 1366
+    },
+    {
+      "imageType": "screenshot",
+      "backgroundColor": "transparent",
+      "foregroundColor": "",
+      "caption": "",
+      "imagePositionInfo": "Desktop/1",
+      "productColor": null,
+      "url": "https://store-images.s-microsoft.com/image/apps.42868.13634052595610511.61855810-f6fa-4a6c-aa1f-520d3b480f99.9254ce78-04d5-4423-94b5-a2be374029de",
+      "height": 768,
+      "width": 1366
+    },
+    {
+      "imageType": "screenshot",
+      "backgroundColor": "transparent",
+      "foregroundColor": "",
+      "caption": "",
+      "imagePositionInfo": "Desktop/2",
+      "productColor": null,
+      "url": "https://store-images.s-microsoft.com/image/apps.17864.13634052595610511.61855810-f6fa-4a6c-aa1f-520d3b480f99.0921a47f-e4dd-410b-9967-c6323a5cb080",
+      "height": 768,
+      "width": 1366
+    },
+    {
+      "imageType": "screenshot",
+      "backgroundColor": "transparent",
+      "foregroundColor": "",
+      "caption": "",
+      "imagePositionInfo": "Desktop/3",
+      "productColor": null,
+      "url": "https://store-images.s-microsoft.com/image/apps.28815.13634052595610511.61855810-f6fa-4a6c-aa1f-520d3b480f99.8808d05c-1474-451f-9b9a-ad903e7e3c8a",
+      "height": 768,
+      "width": 1366
+    },
+    {
+      "imageType": "screenshot",
+      "backgroundColor": "transparent",
+      "foregroundColor": "",
+      "caption": "",
+      "imagePositionInfo": "Desktop/4",
+      "productColor": null,
+      "url": "https://store-images.s-microsoft.com/image/apps.28460.13634052595610511.61855810-f6fa-4a6c-aa1f-520d3b480f99.fc7e978b-8db4-4147-af38-5d3110a9e03a",
+      "height": 768,
+      "width": 1366
+    }
+  ],
+  "productId": "9NH2GPH4JZS4",
+  "title": "TikTok",
+  "shortTitle": "",
+  "subtitle": "TikTok Pte. Ltd.",
+  "description": "TikTok is THE destination for mobile videos. On TikTok, short-form videos are exciting, spontaneous, and genuine. Whether you’re a sports fanatic, a pet enthusiast, or just looking for a laugh, there’s something for everyone on TikTok. All you have to do is watch, engage with what you like, skip what you don’t, and you’ll find an endless stream of short videos that feel personalized just for you. From your morning coffee to your afternoon errands, TikTok has the videos that are guaranteed to make your day.\r\n\r\nWe make it easy for you to discover and create your own original videos by providing easy-to-use tools to view and capture your daily moments. Take your videos to the next level with special effects, filters, music, and more. \r\n\r\n■ Watch endless amount of videos customized specifically for you\r\nA personalized video feed based on what you watch, like, and share. TikTok offers you real, interesting, and fun videos that will make your day.\r\n \r\n■ Explore videos, just one scroll away\r\nWatch all types of videos, from Comedy, Gaming, DIY, Food, Sports, Memes, and Pets, to Oddly Satisfying, ASMR, and everything in between.\r\n \r\n■ Pause recording multiple times in one video\r\nPause and resume your video with just a tap. Shoot as many times as you need.\r\n \r\n■ Be entertained and inspired by a global community of creators\r\nMillions of creators are on TikTok showcasing their incredible skills and everyday life. Let yourself be inspired.\r\n\r\n■ Add your favorite music or sound to your videos for free\r\nEasily edit your videos with millions of free music clips and sounds. We curate music and sound playlists for you with the hottest tracks in every genre, including Hip Hop, Edm, Pop, Rock, Rap, and Country, and the most viral original sounds.\r\n\r\n■ Express yourself with creative effects\r\nUnlock tons of filters, effects, and AR objects to take your videos to the next level.\r\n\r\n■ Edit your own videos \r\nOur integrated editing tools allow you to easily trim, cut, merge and duplicate video clips without leaving the app.\r\n\r\n* Any feedback? Contact us at https://www.tiktok.com/legal/report/feedback or tweet us @tiktok_us",
+  "shortDescription": "",
+  "developerName": "",
+  "publisherName": "TikTok Pte. Ltd.",
+  "publisherId": "83379510",
+  "isUniversal": false,
+  "language": "en-us",
+  "bgColor": null,
+  "fgColor": null,
+  "price": 0,
+  "displayPrice": "Free",
+  "strikethroughPrice": null,
+  "recentLowestPriceMessage": null,
+  "displayPricePrefix": null,
+  "buyActionTitleOverride": null,
+  "buyActionSubtitle": null,
+  "currencyMismatch": false,
+  "promoMessage": null,
+  "promoEndDateUtc": null,
+  "averageRating": 4.2,
+  "ratingCount": 7107,
+  "hasFreeTrial": true,
+  "productType": "Application",
+  "productFamilyName": "Apps",
+  "mediaType": "Apps",
+  "contentIds": [
+    "ff64541a-fb3b-a99d-8336-c85b95c1d475",
+    "a959ccde-02d8-c588-d8fb-5251a208ed87"
+  ],
+  "packageFamilyNames": [
+    "BytedancePte.Ltd.TikTok_6yccndn6064se"
+  ],
+  "recommendationReason": null,
+  "releaseNotes": null,
+  "subcategoryName": "",
+  "alternateId": null,
+  "alternateIds": [
+    {
+      "alternateIdType": "LegacyWindowsStoreProductId",
+      "alternateIdValue": "37503553-9dcf-49ac-9f93-04be7791cbd1",
+      "alternatedIdTypeString": "LegacyWindowsStoreProductId"
+    },
+    {
+      "alternateIdType": "LegacyWindowsPhoneProductId",
+      "alternateIdValue": "000174be-11c6-457a-8995-f67fc2a53269",
+      "alternatedIdTypeString": "LegacyWindowsPhoneProductId"
+    },
+    {
+      "alternateIdType": "XboxTitleId",
+      "alternateIdValue": "2040967776",
+      "alternatedIdTypeString": "XboxTitleId"
+    }
+  ],
+  "curatedBGColor": null,
+  "curatedFGColor": null,
+  "curatedImageUrl": null,
+  "curatedTitle": null,
+  "curatedDescription": null,
+  "doNotFilter": null,
+  "collectionItemType": "Product",
+  "curatedVideoUri": null,
+  "creativeId": null,
+  "payloadId": null,
+  "contentType": null,
+  "artistName": null,
+  "artistId": null,
+  "albumTitle": null,
+  "albumProductId": null,
+  "isExplicit": null,
+  "numberOfSeasons": 0,
+  "releaseDateUtc": "2021-06-24T14:56:40.050714Z",
+  "durationInSeconds": 0,
+  "isCompatible": true,
+  "isSoftBlocked": null,
+  "isPurchaseEnabled": true,
+  "incompatibleReason": null,
+  "developerOptOutOfSDCardInstall": false,
+  "hasAddOns": false,
+  "hasThirdPartyIAPs": false,
+  "externalUri": null,
+  "autosuggestSubtitle": null,
+  "merchandizedProductType": null,
+  "voiceTitle": "",
+  "phraseCustomPronunciation": null,
+  "plaintextPassName": null,
+  "glyphTextPassName": null,
+  "subscriptionDiscountMessageTemplate": null,
+  "capabilitiesTable": [],
+  "capabilities": [],
+  "hideFromCollections": false,
+  "isDownloadable": true,
+  "hideFromDownloadsAndUpdates": false,
+  "incompatibleLink": null,
+  "incompatibleLabel": null,
+  "gamingOptionsXboxLive": false,
+  "actionOverrides": [
+    {
+      "actionType": "InstallOnDevices",
+      "cases": [
+        {
+          "conditions": {
+            "classicAppKeys": [],
+            "fullSkuLicenseSatisfied": null,
+            "fullSkuOwned": null,
+            "platform": {
+              "maxVersion": null,
+              "minVersion": null,
+              "platformName": "Windows.Xbox",
+              "architecture": null
+            }
+          },
+          "visibility": false,
+          "uri": null,
+          "targetApplication": null
+        }
+      ]
+    },
+    {
+      "actionType": "share",
+      "cases": [
+        {
+          "conditions": {
+            "classicAppKeys": [],
+            "fullSkuLicenseSatisfied": null,
+            "fullSkuOwned": null,
+            "platform": {
+              "maxVersion": null,
+              "minVersion": null,
+              "platformName": "Windows.Xbox",
+              "architecture": null
+            }
+          },
+          "visibility": false,
+          "uri": null,
+          "targetApplication": null
+        },
+        {
+          "conditions": {
+            "classicAppKeys": [],
+            "fullSkuLicenseSatisfied": null,
+            "fullSkuOwned": null,
+            "platform": {
+              "maxVersion": null,
+              "minVersion": null,
+              "platformName": "Windows.Holographic",
+              "architecture": null
+            }
+          },
+          "visibility": false,
+          "uri": null,
+          "targetApplication": null
+        },
+        {
+          "conditions": null,
+          "visibility": true,
+          "uri": "https://www.microsoft.com/store/productId/{productId}?ocid=pdpshare",
+          "targetApplication": null
+        }
+      ]
+    }
+  ],
+  "availableDevicesDisplayText": "  ",
+  "availableDevicesNarratorText": "PC,HoloLens,Mobile",
+  "models": null,
+  "capabilityXboxEnhanced": null,
+  "badges": [],
+  "catalogId": null,
+  "hasParentBundle": null,
+  "acquiredDateUtc": null,
+  "approximateSizeInBytes": 785879,
+  "maxInstallSizeInBytes": 1093632,
+  "bundleIds": null,
+  "productActionsList": null,
+  "skusSummary": [
+    {
+      "skuId": "0010",
+      "skuDisplayRanks": null,
+      "skuTitle": null,
+      "description": null,
+      "images": null,
+      "badges": null,
+      "colorHexCode": null,
+      "colorDisplayName": null,
+      "msrp": 0,
+      "displayMSRP": "Free",
+      "salePrices": [
+        {
+          "conditions": null,
+          "price": 0,
+          "displayPrice": "Free",
+          "badgeId": "default"
+        }
+      ],
+      "includedWith": null,
+      "streamingService": null
+    },
+    {
+      "skuId": "0011",
+      "skuDisplayRanks": null,
+      "skuTitle": null,
+      "description": null,
+      "images": null,
+      "badges": null,
+      "colorHexCode": null,
+      "colorDisplayName": null,
+      "msrp": null,
+      "displayMSRP": null,
+      "salePrices": null,
+      "includedWith": null,
+      "streamingService": null
+    }
+  ],
+  "colorPicker": null,
+  "bundlePackageIdentities": null,
+  "pcgaShortDescription": null,
+  "pcgaTrailer": null,
+  "pcgaMinimumUserAge": null,
+  "isGamingAppOnly": false,
+  "installerType": null,
+  "appExtension": {
+    "appWithExt": true,
+    "appExtCategoryNames": [
+      "AppExtension-microsoft.store.edgePWA",
+      "AppExtension-com.ms.webapp.internals.4"
+    ],
+    "localizedCategoryNames": [
+      "Microsoft Edge"
+    ],
+    "appExtTypes": [
+      "Other"
+    ],
+    "appExtTypeStrings": [
+      "Other"
+    ],
+    "appExtCapabilities": null,
+    "appExtMessage": "This app requires the latest version of Microsoft Edge."
+  },
+  "supportsInstantGaming": false,
+  "schema": null
+}

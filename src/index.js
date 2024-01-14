@@ -27,6 +27,7 @@ class Microsoft {
     );
     return await response.json();
   }
+
   async #getReviews() {
     const response = await fetch(
       `https://microsoft-store.azurewebsites.net/api/products/getReviews/9NH2GPH4JZS4?` +
@@ -39,6 +40,7 @@ class Microsoft {
 
     return items;
   }
+
   async #start() {
     const app = await this.#getDetail();
     const rating = await this.#getRating();
@@ -47,18 +49,19 @@ class Microsoft {
     const link = `${this.#BASE_URL}/detail/${app.productId}`;
 
     const { title } = app;
+    const domain = this.#BASE_URL.split("/")[2];
 
     reviews.forEach((review) => {
       const { reviewerName } = review;
 
       this.#writeFile(`data/${title}/${reviewerName}.json`, {
         link,
-        domain: this.#BASE_URL.split("/")[2],
+        domain,
         tag: link.split("/").slice(2),
         crawling_time: strftime("%Y-%m-%d %H:%M:%S", new Date()),
         crawling_time_epoch: Date.now(),
-        path_data_raw: "string",
-        path_data_clean: "string",
+        path_data_raw: `data/data_raw/data_review/${domain}/${title}/json/${reviewerName}.json`,
+        path_data_clean: `data/data_clean/data_review/${domain}/${title}/json/${reviewerName}.json`,
         reviews_name: title,
         release_date_reviews: strftime(
           "%Y-%m-%d %H:%M:%S",

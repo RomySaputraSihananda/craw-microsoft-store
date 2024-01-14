@@ -1,8 +1,0 @@
-get detail
-https://microsoft-store.azurewebsites.net/api/pages/pdp?productId=9NH2GPH4JZS4
-
-summary rating
-https://microsoft-store.azurewebsites.net/api/Products/GetReviewsSummary/9NH2GPH4JZS4
-
-rating with pagging
-https://microsoft-store.azurewebsites.net/api/products/getReviews/9NH2GPH4JZS4?pgNo=2&noItems=10

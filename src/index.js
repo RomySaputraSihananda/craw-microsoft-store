@@ -1,14 +1,12 @@
 import fs from "fs-extra";
 import strftime from "strftime";
 import crypto from "crypto";
+import fetch from "node-fetch";
 
 class Microsoft {
   #BASE_URL = "https://microsoft-store.azurewebsites.net";
-  #productId;
 
-  constructor(productId) {
-    this.#productId = productId;
-
+  constructor() {
     this.#start();
   }
 
@@ -16,30 +14,65 @@ class Microsoft {
     await fs.outputFile(outputFile, JSON.stringify(data, null, 2));
   }
 
-  async #getDetail() {
+  async #start() {
+    for (const mediaType of ["games", "apps"]) {
+      const response = await fetch(
+        `https://microsoft-store.azurewebsites.net/api/Reco/GetCollectionFiltersList?` +
+          new URLSearchParams({
+            mediaType,
+          })
+      );
+      const [filter] = await response.json();
+      for (const { choiceId } of filter.choices) {
+        let pgNo = 1;
+        while (true) {
+          const response = await fetch(
+            `https://microsoft-store.azurewebsites.net/api/Reco/GetComputedProductsList?` +
+              new URLSearchParams({
+                listName: choiceId.replace(/^./, choiceId[0].toUpperCase()),
+                pgNo,
+                noItems: 100,
+                filteredCategories: "AllProducts",
+                mediaType,
+              })
+          );
+          const { productsList, nextPageNumber } = await response.json();
+          if (nextPageNumber < 0) break;
+
+          for (const { productId } of productsList) {
+            await this.#process(productId);
+          }
+
+          pgNo++;
+        }
+      }
+    }
+  }
+
+  async #getDetail(productId) {
     const response = await fetch(
       `${this.#BASE_URL}/api/pages/pdp?` +
         new URLSearchParams({
-          productId: this.#productId,
+          productId,
         })
     );
     return await response.json();
   }
 
-  async #getRating() {
+  async #getRating(productId) {
     const response = await fetch(
-      `${this.#BASE_URL}/api/Products/GetReviewsSummary/${this.#productId}`
+      `${this.#BASE_URL}/api/Products/GetReviewsSummary/${productId}`
     );
     return await response.json();
   }
 
-  async #getReviews() {
+  async #getReviews(productId) {
     const reviews = [];
     let i = 1;
 
     while (true) {
       const response = await fetch(
-        `${this.#BASE_URL}/api/products/getReviews/${this.#productId}?` +
+        `${this.#BASE_URL}/api/products/getReviews/${productId}?` +
           new URLSearchParams({
             pgNo: i,
             noItems: 25,
@@ -56,34 +89,37 @@ class Microsoft {
     return reviews;
   }
 
-  async #start() {
-    const app = await this.#getDetail();
-    const rating = await this.#getRating();
-    const reviews = await this.#getReviews();
+  async #process(productId) {
+    const app = await this.#getDetail(productId);
+    const rating = await this.#getRating(productId);
+    const reviews = await this.#getReviews(productId);
 
     const link = `${this.#BASE_URL}/detail/${app.productId}`;
 
     const { title } = app;
     const domain = this.#BASE_URL.split("/")[2];
-    this.#writeFile(
-      "test.py",
-      reviews.map((e) => {
-        return e.reviewerName;
-      })
-    );
-    reviews.forEach((review, i) => {
+
+    const log = {
+      source: link,
+      total_data: reviews.length,
+      total_data_berhasil_diproses: 0,
+      total_data_gagal_diproses: 0,
+      PIC: "romy",
+    };
+
+    reviews.forEach((review) => {
       const username = review.reviewerName;
 
-      this.#writeFile(
-        `data/${title}/${username ? username : crypto.randomUUID()}.json`,
-        {
+      const output = `data/${title}/${review.reviewId}.json`;
+      try {
+        this.#writeFile(output, {
           link,
           domain,
           tag: link.split("/").slice(2),
           crawling_time: strftime("%Y-%m-%d %H:%M:%S", new Date()),
           crawling_time_epoch: Date.now(),
-          path_data_raw: `data/data_raw/data_review/${domain}/${title}/json/${username}.json`,
-          path_data_clean: `data/data_clean/data_review/${domain}/${title}/json/${username}.json`,
+          path_data_raw: `data/data_raw/data_review/${domain}/${title}/json/${review.reviewId}.json`,
+          path_data_clean: `data/data_clean/data_review/${domain}/${title}/json/${review.reviewId}.json`,
           reviews_name: title,
           release_date_reviews: strftime(
             "%Y-%m-%d %H:%M:%S",
@@ -163,11 +199,16 @@ class Microsoft {
             date_of_experience: null,
             date_of_experience_epoch: null,
           },
-        }
-      );
+        });
+        log.total_data_berhasil_diproses += 1;
+        console.log(output);
+      } catch (e) {
+        log.total_data_gagal_diproses += 1;
+      }
     });
+    fs.appendFile("log.txt", JSON.stringify(log) + "\n");
   }
 }
 
-// new Microsoft("9NH2GPH4JZS4");
-// new Microsoft("9WZDNCRDH4PJ");
+new Microsoft();
+// new Microsoft("9N720LBNMTFT");

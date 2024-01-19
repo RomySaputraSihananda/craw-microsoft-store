@@ -208,6 +208,7 @@ class Microsoft {
           console.log(output);
         } catch (e) {
           log.total_data_gagal_diproses += 1;
+          fs.appendFile("error.txt", e.toString() + "\n");
         }
       });
       fs.appendFile("log.txt", JSON.stringify(log) + "\n");

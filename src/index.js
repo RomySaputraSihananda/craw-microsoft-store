@@ -5,6 +5,7 @@ import fetch from "node-fetch";
 
 class Microsoft {
   #BASE_URL = "https://microsoft-store.azurewebsites.net";
+  #id_project = crypto.createHash("md5").update(this.#BASE_URL).digest("hex");
 
   constructor() {
     this.#start();
@@ -102,121 +103,162 @@ class Microsoft {
       const domain = this.#BASE_URL.split("/")[2];
 
       const log = {
-        source: link,
+        Crawlling_time: strftime("%Y-%m-%d %H:%M:%S", new Date()),
+        id_project: this.#id_project,
+        project: "Data Intelegent",
+        source_name: app.title,
         total_data: reviews.length,
-        total_data_berhasil_diproses: 0,
-        total_data_gagal_diproses: 0,
-        PIC: "romy",
+        total_success: 0,
+        total_failed: 0,
+        status: "Process",
+        assign: "romy",
       };
 
-      reviews.forEach(async (review) => {
-        const username = review.reviewerName;
+      await Promise.all(
+        reviews.map(async (review) => {
+          const username = review.reviewerName;
 
-        const output = `data/${title}/${review.reviewId}.json`;
-        try {
-          await this.#writeFile(output, {
-            link,
-            domain,
-            tag: link.split("/").slice(2),
-            crawling_time: strftime("%Y-%m-%d %H:%M:%S", new Date()),
-            crawling_time_epoch: Date.now(),
-            path_data_raw: `data/data_raw/data_review/${domain}/${title}/json/${review.reviewId}.json`,
-            path_data_clean: `data/data_clean/data_review/${domain}/${title}/json/${review.reviewId}.json`,
-            reviews_name: title,
-            release_date_reviews: strftime(
-              "%Y-%m-%d %H:%M:%S",
-              new Date(app.releaseDateUtc)
-            ),
-            release_date_epoch_reviews: new Date(app.releaseDateUtc).getTime(),
-            description_reviews: app.description,
-            developer_reviews: app.developerName.length
-              ? app.developerName
-              : null,
-            publisher_reviews: app.publisherName.length
-              ? app.publisherName
-              : null,
-            features_reviews: app.features,
-            website_url_reviews: app.appWebsiteUrl,
-            product_ratings_reviews: app.productRatings.map(
-              (rating) => rating.description
-            ),
-            system_requirements_reviews: Object.fromEntries(
-              Object.entries(app.systemRequirements).map(([key, value]) => {
-                return [
-                  key,
-                  value.items.map((item) => {
-                    return {
-                      name: item.name,
-                      description: item.description,
-                    };
-                  }),
-                ];
-              })
-            ),
-            approximate_size_in_bytes_reviews: app.approximateSizeInBytes,
-            maxInstall_size_in_bytes_reviews: app.maxInstallSizeInBytes,
-            permissions_required_reviews: app.permissionsRequired,
-            installation_reviews: app.installationTerms,
-            allowed_platforms_reviews: app.allowedPlatforms,
-            screenshots_reviews: app.screenshots.map(
-              (screenshot) => screenshot.url
-            ),
-            location_reviews: null,
-            category_reviews: "application",
-            total_reviews: rating.reviewCount,
-            review_info: Object.fromEntries(
-              Object.entries(rating)
-                .filter(([key]) => key.endsWith("ReviewCount"))
-                .map(([key, value]) => [key.charAt(4), value])
-            ),
-            total_ratings: app.ratingCount,
-            rating_info: Object.fromEntries(
-              Object.entries(rating)
-                .filter(([key]) => /(\d+)Count$/.test(key))
-                .map(([key, value]) => [key.charAt(4), value])
-            ),
-            reviews_rating: {
-              total_rating: rating.averageRating,
-              detail_total_rating: null,
-            },
-            detail_reviews: {
-              username_reviews: username,
-              image_reviews: null,
-              created_time: strftime(
+          const output = `data/${title}/${review.reviewId}.json`;
+          try {
+            await this.#writeFile(output, {
+              link,
+              domain,
+              tag: link.split("/").slice(2),
+              crawling_time: strftime("%Y-%m-%d %H:%M:%S", new Date()),
+              crawling_time_epoch: Date.now(),
+              path_data_raw: `data/data_raw/data_review/${domain}/${title}/json/${review.reviewId}.json`,
+              path_data_clean: `data/data_clean/data_review/${domain}/${title}/json/${review.reviewId}.json`,
+              reviews_name: title,
+              release_date_reviews: strftime(
                 "%Y-%m-%d %H:%M:%S",
-                new Date(review.submittedDateTimeUtc)
+                new Date(app.releaseDateUtc)
               ),
-              created_time_epoch: new Date(
-                review.submittedDateTimeUtc
+              release_date_epoch_reviews: new Date(
+                app.releaseDateUtc
               ).getTime(),
-              email_reviews: null,
-              company_name: null,
+              description_reviews: app.description,
+              developer_reviews: app.developerName.length
+                ? app.developerName
+                : null,
+              publisher_reviews: app.publisherName.length
+                ? app.publisherName
+                : null,
+              features_reviews: app.features,
+              website_url_reviews: app.appWebsiteUrl,
+              product_ratings_reviews: app.productRatings.map(
+                (rating) => rating.description
+              ),
+              system_requirements_reviews: Object.fromEntries(
+                Object.entries(app.systemRequirements).map(([key, value]) => {
+                  return [
+                    key,
+                    value.items.map((item) => {
+                      return {
+                        name: item.name,
+                        description: item.description,
+                      };
+                    }),
+                  ];
+                })
+              ),
+              approximate_size_in_bytes_reviews: app.approximateSizeInBytes,
+              maxInstall_size_in_bytes_reviews: app.maxInstallSizeInBytes,
+              permissions_required_reviews: app.permissionsRequired,
+              installation_reviews: app.installationTerms,
+              allowed_platforms_reviews: app.allowedPlatforms,
+              screenshots_reviews: app.screenshots.map(
+                (screenshot) => screenshot.url
+              ),
               location_reviews: null,
-              title_detail_reviews: review.title,
-              reviews_rating: review.rating,
-              detail_reviews_rating: null,
-              total_likes_reviews: review.helpfulPositive,
-              total_dislikes_reviews: review.helpfulNegative,
-              total_reply_reviews: null,
-              content_reviews: review.reviewText,
-              reply_content_reviews: null,
-              date_of_experience: null,
-              date_of_experience_epoch: null,
-            },
-          });
-          log.total_data_berhasil_diproses += 1;
-          console.log(output);
-        } catch (e) {
-          log.total_data_gagal_diproses += 1;
-          fs.appendFile("error.txt", e.toString() + "\n");
-        }
-      });
-      fs.appendFile("log.txt", JSON.stringify(log) + "\n");
+              category_reviews: "application",
+              total_reviews: rating.reviewCount,
+              review_info: Object.fromEntries(
+                Object.entries(rating)
+                  .filter(([key]) => key.endsWith("ReviewCount"))
+                  .map(([key, value]) => [key.charAt(4), value])
+              ),
+              total_ratings: app.ratingCount,
+              rating_info: Object.fromEntries(
+                Object.entries(rating)
+                  .filter(([key]) => /(\d+)Count$/.test(key))
+                  .map(([key, value]) => [key.charAt(4), value])
+              ),
+              reviews_rating: {
+                total_rating: rating.averageRating,
+                detail_total_rating: null,
+              },
+              detail_reviews: {
+                username_reviews: username,
+                image_reviews: null,
+                created_time: strftime(
+                  "%Y-%m-%d %H:%M:%S",
+                  new Date(review.submittedDateTimeUtc)
+                ),
+                created_time_epoch: new Date(
+                  review.submittedDateTimeUtc
+                ).getTime(),
+                email_reviews: null,
+                company_name: null,
+                location_reviews: null,
+                title_detail_reviews: review.title,
+                reviews_rating: review.rating,
+                detail_reviews_rating: null,
+                total_likes_reviews: review.helpfulPositive,
+                total_dislikes_reviews: review.helpfulNegative,
+                total_reply_reviews: null,
+                content_reviews: review.reviewText,
+                reply_content_reviews: null,
+                date_of_experience: null,
+                date_of_experience_epoch: null,
+              },
+            });
+            log.total_success += 1;
+
+            // console.log(output);
+          } catch (e) {
+            log.total_failed += 1;
+            await fs.appendFile(
+              "error.txt",
+              JSON.stringify({
+                crawling_time: strftime("%Y-%m-%d %H:%M:%S", new Date()),
+                id_project: this.#id_project,
+                project: "Data Intelegent",
+                source_name: title,
+                id: "1702871153359860",
+                process_name: "Crawling",
+                status: "error",
+                type_error: "ConnectionError",
+                detail_error: e,
+                assign: "romy",
+              }) + "\n"
+            );
+          }
+        })
+      );
+
+      log.status = "Done";
+
+      console.log(log);
+
+      await fs.appendFile("log.txt", JSON.stringify(log) + "\n");
     } catch (e) {
-      fs.appendFile("error.txt", e.toString() + "\n");
+      await fs.appendFile(
+        "error.txt",
+        JSON.stringify({
+          crawling_time: strftime("%Y-%m-%d %H:%M:%S", new Date()),
+          id_project: this.#id_project,
+          project: "Data Intelegent",
+          // source_name: title,
+          id: "1702871153359860",
+          process_name: "Crawling",
+          status: "error",
+          type_error: "ConnectionError",
+          detail_error: e,
+          assign: "romy",
+        }) + "\n"
+      );
     }
   }
 }
 
 new Microsoft();
-// new Microsoft("9N720LBNMTFT");

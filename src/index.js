@@ -2,10 +2,12 @@ import fs from "fs-extra";
 import strftime from "strftime";
 import crypto from "crypto";
 import fetch from "node-fetch";
+import { infoLog, updateLog, writeLog } from "./utils/logsio.js";
 
 class Microsoft {
   #BASE_URL = "https://microsoft-store.azurewebsites.net";
   #id_project = crypto.createHash("md5").update(this.#BASE_URL).digest("hex");
+  #fileNameLog = "Monitoring data.json";
 
   constructor() {
     this.#start();
@@ -18,7 +20,7 @@ class Microsoft {
   async #start() {
     for (const mediaType of ["games", "apps"]) {
       const response = await fetch(
-        `https://microsoft-store.azurewebsites.net/api/Reco/GetCollectionFiltersList?` +
+        `${this.#BASE_URL}/api/Reco/GetCollectionFiltersList?` +
           new URLSearchParams({
             mediaType,
           })
@@ -28,7 +30,7 @@ class Microsoft {
         let pgNo = 1;
         while (true) {
           const response = await fetch(
-            `https://microsoft-store.azurewebsites.net/api/Reco/GetComputedProductsList?` +
+            `${this.#BASE_URL}/api/Reco/GetComputedProductsList?` +
               new URLSearchParams({
                 listName: choiceId.replace(/^./, choiceId[0].toUpperCase()),
                 pgNo,
@@ -41,7 +43,6 @@ class Microsoft {
           if (nextPageNumber < 0) break;
 
           productsList.forEach(async ({ productId }) => {
-            // for (const { productId } of productsList) {
             await this.#process(productId);
           });
 
@@ -102,91 +103,99 @@ class Microsoft {
       const { title } = app;
       const domain = this.#BASE_URL.split("/")[2];
 
+      const headers = {
+        link,
+        domain,
+        tag: link.split("/").slice(2),
+        crawling_time: strftime("%Y-%m-%d %H:%M:%S", new Date()),
+        crawling_time_epoch: Date.now(),
+        reviews_name: title,
+        release_date_reviews: strftime(
+          "%Y-%m-%d %H:%M:%S",
+          new Date(app.releaseDateUtc)
+        ),
+        release_date_epoch_reviews: new Date(app.releaseDateUtc).getTime(),
+        description_reviews: app.description,
+        developer_reviews: app.developerName.length ? app.developerName : null,
+        publisher_reviews: app.publisherName.length ? app.publisherName : null,
+        features_reviews: app.features,
+        website_url_reviews: app.appWebsiteUrl,
+        product_ratings_reviews: app.productRatings.map(
+          (rating) => rating.description
+        ),
+        system_requirements_reviews: Object.fromEntries(
+          Object.entries(app.systemRequirements).map(([key, value]) => {
+            return [
+              key,
+              value.items.map((item) => {
+                return {
+                  name: item.name,
+                  description: item.description,
+                };
+              }),
+            ];
+          })
+        ),
+        approximate_size_in_bytes_reviews: app.approximateSizeInBytes,
+        maxInstall_size_in_bytes_reviews: app.maxInstallSizeInBytes,
+        permissions_required_reviews: app.permissionsRequired,
+        installation_reviews: app.installationTerms,
+        allowed_platforms_reviews: app.allowedPlatforms,
+        screenshots_reviews: app.screenshots.map(
+          (screenshot) => screenshot.url
+        ),
+        location_reviews: null,
+        category_reviews: "application",
+        total_reviews: rating.reviewCount,
+        review_info: Object.fromEntries(
+          Object.entries(rating)
+            .filter(([key]) => key.endsWith("ReviewCount"))
+            .map(([key, value]) => [key.charAt(4), value])
+        ),
+        total_ratings: app.ratingCount,
+        rating_info: Object.fromEntries(
+          Object.entries(rating)
+            .filter(([key]) => /(\d+)Count$/.test(key))
+            .map(([key, value]) => [key.charAt(4), value])
+        ),
+        reviews_rating: {
+          total_rating: rating.averageRating,
+          detail_total_rating: null,
+        },
+      };
+
+      let output = `data/${title}/detail.json`;
+
+      if (!reviews.length) {
+        this.#writeFile(output, headers);
+      }
+
       const log = {
         Crawlling_time: strftime("%Y-%m-%d %H:%M:%S", new Date()),
-        id_project: this.#id_project,
-        project: "Data Intelegent",
-        source_name: app.title,
+        id_project: null,
+        project: "Data Intelligence",
+        sub_project: "data review",
+        source_name: this.#BASE_URL.split("/")[2],
+        sub_source_name: title,
+        id_sub_source: app.productId.toString(),
         total_data: reviews.length,
         total_success: 0,
         total_failed: 0,
         status: "Process",
         assign: "romy",
       };
+      writeLog(log);
 
       await Promise.all(
         reviews.map(async (review) => {
           const username = review.reviewerName;
 
-          const output = `data/${title}/${review.reviewId}.json`;
+          output = `data/${title}/${review.reviewId}.json`;
           try {
             await this.#writeFile(output, {
-              link,
-              domain,
-              tag: link.split("/").slice(2),
-              crawling_time: strftime("%Y-%m-%d %H:%M:%S", new Date()),
-              crawling_time_epoch: Date.now(),
+              ...headers,
               path_data_raw: `data/data_raw/data_review/${domain}/${title}/json/${review.reviewId}.json`,
               path_data_clean: `data/data_clean/data_review/${domain}/${title}/json/${review.reviewId}.json`,
-              reviews_name: title,
-              release_date_reviews: strftime(
-                "%Y-%m-%d %H:%M:%S",
-                new Date(app.releaseDateUtc)
-              ),
-              release_date_epoch_reviews: new Date(
-                app.releaseDateUtc
-              ).getTime(),
-              description_reviews: app.description,
-              developer_reviews: app.developerName.length
-                ? app.developerName
-                : null,
-              publisher_reviews: app.publisherName.length
-                ? app.publisherName
-                : null,
-              features_reviews: app.features,
-              website_url_reviews: app.appWebsiteUrl,
-              product_ratings_reviews: app.productRatings.map(
-                (rating) => rating.description
-              ),
-              system_requirements_reviews: Object.fromEntries(
-                Object.entries(app.systemRequirements).map(([key, value]) => {
-                  return [
-                    key,
-                    value.items.map((item) => {
-                      return {
-                        name: item.name,
-                        description: item.description,
-                      };
-                    }),
-                  ];
-                })
-              ),
-              approximate_size_in_bytes_reviews: app.approximateSizeInBytes,
-              maxInstall_size_in_bytes_reviews: app.maxInstallSizeInBytes,
-              permissions_required_reviews: app.permissionsRequired,
-              installation_reviews: app.installationTerms,
-              allowed_platforms_reviews: app.allowedPlatforms,
-              screenshots_reviews: app.screenshots.map(
-                (screenshot) => screenshot.url
-              ),
-              location_reviews: null,
-              category_reviews: "application",
-              total_reviews: rating.reviewCount,
-              review_info: Object.fromEntries(
-                Object.entries(rating)
-                  .filter(([key]) => key.endsWith("ReviewCount"))
-                  .map(([key, value]) => [key.charAt(4), value])
-              ),
-              total_ratings: app.ratingCount,
-              rating_info: Object.fromEntries(
-                Object.entries(rating)
-                  .filter(([key]) => /(\d+)Count$/.test(key))
-                  .map(([key, value]) => [key.charAt(4), value])
-              ),
-              reviews_rating: {
-                total_rating: rating.averageRating,
-                detail_total_rating: null,
-              },
               detail_reviews: {
                 username_reviews: username,
                 image_reviews: null,
@@ -214,50 +223,19 @@ class Microsoft {
             });
             log.total_success += 1;
 
-            // console.log(output);
+            updateLog(log);
+            infoLog(log, review.reviewId, "success");
           } catch (e) {
             log.total_failed += 1;
-            await fs.appendFile(
-              "error.txt",
-              JSON.stringify({
-                crawling_time: strftime("%Y-%m-%d %H:%M:%S", new Date()),
-                id_project: this.#id_project,
-                project: "Data Intelegent",
-                source_name: title,
-                id: "1702871153359860",
-                process_name: "Crawling",
-                status: "error",
-                type_error: "ConnectionError",
-                detail_error: e,
-                assign: "romy",
-              }) + "\n"
-            );
+            infoLog(log, review.reviewId, "error", e);
           }
+          console.log(output);
         })
       );
-
       log.status = "Done";
 
-      console.log(log);
-
-      await fs.appendFile("log.txt", JSON.stringify(log) + "\n");
-    } catch (e) {
-      await fs.appendFile(
-        "error.txt",
-        JSON.stringify({
-          crawling_time: strftime("%Y-%m-%d %H:%M:%S", new Date()),
-          id_project: this.#id_project,
-          project: "Data Intelegent",
-          // source_name: title,
-          id: "1702871153359860",
-          process_name: "Crawling",
-          status: "error",
-          type_error: "ConnectionError",
-          detail_error: e,
-          assign: "romy",
-        }) + "\n"
-      );
-    }
+      updateLog(log);
+    } catch (e) {}
   }
 }
 

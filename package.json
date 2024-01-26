@@ -12,6 +12,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "aws-sdk": "^2.1544.0",
+    "dotenv": "^16.4.1",
     "fs-extra": "^11.2.0",
     "node-fetch": "^3.3.2",
     "strftime": "^0.10.2"

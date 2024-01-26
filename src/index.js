@@ -3,7 +3,7 @@ import strftime from "strftime";
 import crypto from "crypto";
 import fetch from "node-fetch";
 import { infoLog, updateLog, writeLog } from "./utils/logsio.js";
-
+import { uploadS3Json } from "./utils/upload-s3.js";
 class Microsoft {
   #BASE_URL = "https://microsoft-store.azurewebsites.net";
   #id_project = crypto.createHash("md5").update(this.#BASE_URL).digest("hex");
@@ -34,17 +34,21 @@ class Microsoft {
               new URLSearchParams({
                 listName: choiceId.replace(/^./, choiceId[0].toUpperCase()),
                 pgNo,
-                noItems: 100,
+                noItems: 5,
                 filteredCategories: "AllProducts",
                 mediaType,
               })
           );
+
           const { productsList, nextPageNumber } = await response.json();
           if (nextPageNumber < 0) break;
 
-          productsList.forEach(async ({ productId }) => {
-            await this.#process(productId);
-          });
+          await Promise.all(
+            productsList.map(async ({ productId }) => {
+              await this.#process(productId);
+            })
+          );
+          throw new Error("End");
 
           pgNo++;
         }
@@ -162,13 +166,20 @@ class Microsoft {
           total_rating: rating.averageRating,
           detail_total_rating: null,
         },
+        path_data_raw: `S3://ai-pipeline-statistics/data/data_raw/data_review/microsoft_store/${app.title}/json/detail.json`,
+        path_data_clean: `S3://ai-pipeline-statistics/data/data_clean/data_review/microsoft_store/${app.title}/json/detail.json`,
       };
 
-      let output = `data/${title}/detail.json`;
+      await Promise.all(
+        [
+          `data/data_raw/data_review/microsoft_store/${title}/json/detail.json`,
+          `data/data_clean/data_review/microsoft_store/${title}/json/detail.json`,
+        ].map((outputFile) => {
+          // this.#writeFile(outputFile, headers);
 
-      if (!reviews.length) {
-        this.#writeFile(output, headers);
-      }
+          return uploadS3Json(outputFile, headers).then(() => {});
+        })
+      );
 
       const log = {
         Crawlling_time: strftime("%Y-%m-%d %H:%M:%S", new Date()),
@@ -186,52 +197,61 @@ class Microsoft {
       };
       writeLog(log);
 
-      await Promise.all(
-        reviews.map(async (review) => {
-          const username = review.reviewerName;
+      for (const review of reviews) {
+        const username = review.reviewerName;
 
-          output = `data/${title}/${review.reviewId}.json`;
-          try {
-            await this.#writeFile(output, {
-              ...headers,
-              path_data_raw: `data/data_raw/data_review/${domain}/${title}/json/${review.reviewId}.json`,
-              path_data_clean: `data/data_clean/data_review/${domain}/${title}/json/${review.reviewId}.json`,
-              detail_reviews: {
-                username_reviews: username,
-                image_reviews: null,
-                created_time: strftime(
-                  "%Y-%m-%d %H:%M:%S",
-                  new Date(review.submittedDateTimeUtc)
-                ),
-                created_time_epoch: new Date(
-                  review.submittedDateTimeUtc
-                ).getTime(),
-                email_reviews: null,
-                company_name: null,
-                location_reviews: null,
-                title_detail_reviews: review.title,
-                reviews_rating: review.rating,
-                detail_reviews_rating: null,
-                total_likes_reviews: review.helpfulPositive,
-                total_dislikes_reviews: review.helpfulNegative,
-                total_reply_reviews: null,
-                content_reviews: review.reviewText,
-                reply_content_reviews: null,
-                date_of_experience: null,
-                date_of_experience_epoch: null,
-              },
-            });
-            log.total_success += 1;
+        try {
+          const data = {
+            ...headers,
+            path_data_raw: `S3://ai-pipeline-statistics/data/data_raw/data_review/microsoft_store/${title}/json/data_review/${review.reviewId}.json`,
+            path_data_clean: `S3://ai-pipeline-statistics/data/data_clean/data_review/microsoft_store/${title}/json/data_review/${review.reviewId}.json`,
+            detail_reviews: {
+              username_reviews: username,
+              image_reviews: null,
+              created_time: strftime(
+                "%Y-%m-%d %H:%M:%S",
+                new Date(review.submittedDateTimeUtc)
+              ),
+              created_time_epoch: new Date(
+                review.submittedDateTimeUtc
+              ).getTime(),
+              email_reviews: null,
+              company_name: null,
+              location_reviews: null,
+              title_detail_reviews: review.title,
+              reviews_rating: review.rating,
+              detail_reviews_rating: null,
+              total_likes_reviews: review.helpfulPositive,
+              total_dislikes_reviews: review.helpfulNegative,
+              total_reply_reviews: null,
+              content_reviews: review.reviewText,
+              reply_content_reviews: null,
+              date_of_experience: null,
+              date_of_experience_epoch: null,
+            },
+          };
 
-            updateLog(log);
-            infoLog(log, review.reviewId, "success");
-          } catch (e) {
-            log.total_failed += 1;
-            infoLog(log, review.reviewId, "error", e);
-          }
-          console.log(output);
-        })
-      );
+          await Promise.all(
+            [
+              `data/data_raw/data_review/microsoft_store/${title}/json/data_review/${review.reviewId}.json`,
+              `data/data_clean/data_review/microsoft_store/${title}/json/data_review/${review.reviewId}.json`,
+            ].map((outputFile) => {
+              return uploadS3Json(outputFile, data).then(() =>
+                console.log(outputFile)
+              );
+            })
+          );
+
+          log.total_success += 1;
+
+          updateLog(log);
+          infoLog(log, review.reviewId, "success");
+        } catch (e) {
+          log.total_failed += 1;
+          infoLog(log, review.reviewId, "error", e, "Send to S3");
+        }
+      }
+
       log.status = "Done";
 
       updateLog(log);

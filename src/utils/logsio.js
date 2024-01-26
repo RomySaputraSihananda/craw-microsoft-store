@@ -34,6 +34,7 @@ const infoLog = (
   id_data,
   status,
   error,
+  process_name,
   fileName = "Monitoring log error.json"
 ) => {
   writeLog(
@@ -46,7 +47,7 @@ const infoLog = (
       sub_source_name: log.sub_source_name,
       id_sub_source: log.id_sub_source,
       id_data,
-      process_name: "Crawling",
+      process_name: process_name ? process_name : "Crawling",
       status,
       type_error: error ? error.name : "",
       message: error ? error.message : "",
